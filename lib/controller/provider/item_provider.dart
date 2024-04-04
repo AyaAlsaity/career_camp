@@ -4,7 +4,7 @@ import '../model/item_model.dart';
 import 'dart:async';
 import '../services/api.dart';
 
-class GamesProvider with ChangeNotifier {
+class ItemsProvider with ChangeNotifier {
   List<ItemModel> items = [];
   List<ItemModel> filteredItems = [];
   List<ItemModel> favoriteItems = [];

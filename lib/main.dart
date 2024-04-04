@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'controller/provider/item_counter.dart';
 import 'ui/pages/auth/splash_screen.dart';
-
 
 void main() {
   runApp(const MyApp());
@@ -11,9 +12,20 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider<ItemCountrProvider>(
+          create: (_) {
+            return ItemCountrProvider();
+          },
+        ),
+      ],
+      child: Consumer<ItemCountrProvider>(builder: (context, ItemCountListener, _) {
+        return const MaterialApp(
+          debugShowCheckedModeBanner: false,
+          home: SplashScreen(),
+        );
+      }),
     );
   }
 }

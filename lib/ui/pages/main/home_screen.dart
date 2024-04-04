@@ -140,12 +140,14 @@ class _HomeScreenState extends State<HomeScreen> {
                             fontWeight: FontWeight.w500,
                           ),
                         ),
-                        Text(
-                          "More",
-                          style: TextStyle(
-                            fontSize: 10,
-                            color: mainColor,
-                            fontWeight: FontWeight.w500,
+                        InkWell(
+                          child: Text(
+                            "More",
+                            style: TextStyle(
+                              fontSize: 10,
+                              color: mainColor,
+                              fontWeight: FontWeight.w500,
+                            ),
                           ),
                         ),
                       ],
@@ -154,9 +156,40 @@ class _HomeScreenState extends State<HomeScreen> {
                   SizedBox(
                     height: size.width / 12,
                   ),
+
+
+
+                  
+                  // SizedBox(
+                  //     width: double.infinity,
+                  //     height: size.height * 1.5,
+                  //     child: GridView.builder(
+                  //       gridDelegate:
+                  //           const SliverGridDelegateWithFixedCrossAxisCount(
+                  //         childAspectRatio: 1 / 1.5,
+                  //         mainAxisSpacing: 24,
+                  //         crossAxisSpacing: 15,
+                  //         crossAxisCount: 2,
+                  //       ),
+                  //       itemBuilder: (context, index) => const SizedBox(),
+                  //       itemCount: 6,
+                  //     )),
+
+
+
+
+
+
+
+
+
+
+
+
+
                   SizedBox(
                     width: double.infinity,
-                    height: size.height*1.5,
+                    height: size.height * 1.5,
                     child: GridView.builder(
                       physics: const NeverScrollableScrollPhysics(),
                       // padding: const EdgeInsets.all(24),
@@ -229,7 +262,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
